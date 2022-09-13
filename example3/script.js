@@ -12,3 +12,11 @@ function createButton() {
   newButton.innerText = "New click me button!";
   parent.appendChild(newButton);
 }
+
+var parent = document.querySelector('.parent');
+
+parent.addEventListener('click', function(event) {
+  if (event.target.className === 'click-me') {
+    alert(event.target.className);
+  }
+});
